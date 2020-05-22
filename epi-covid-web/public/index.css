@@ -2,6 +2,14 @@ body {
   background-color: black;
 }
 
+.map {
+  width: 1520px;
+}
+
+.mapbox {
+  height: 600px;
+}
+
 .title {
   font-size: x-large;
   margin-left: 30px;
@@ -40,11 +48,4 @@ body {
 
 .row-space {
   margin-top: 20px;
-}
-
-.mapbox {
-  height: 300px;
-  width: 300px;
-  margin-right: auto;
-  margin-left: auto;
 }

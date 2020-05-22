@@ -37,15 +37,16 @@ class Dashboard extends React.Component {
 
   render() {
     const layout = [
-      {i: 'header', x: 0, y: 0, w: 8, h: 1, static: true},
-      {i: 'title', x:0, y: 1, w: 8, h: 1},
-      {i: 'tcases', x: 0, y:2, w: 1, h:2},
-      {i: 'tdeaths1', x: 1, y:2, w: 1, h:2}
+      {i: 'header', x: 0, y: 0, w: 10, h: 1, static: true},
+      {i: 'title', x:0, y: 1, w: 10, h: 1},
+      {i: 'tcases', x: 0, y: 2, w: 1, h:2},
+      {i: 'map', x: 1, y: 2, w: 8, h: 9},
+      {i: 'tdeaths', x: 9, y: 2, w: 1, h:2}
     ];
 
     return (
       <div>
-      <GridLayout className="layout" layout={layout} width={this.state.width} cols={8} autoSize={true} rowHeight={60}>
+      <GridLayout className="layout" layout={layout} width={this.state.width} cols={10} autoSize={true} rowHeight={60}>
         <div key="header">
           <Navigationbar ></Navigationbar>
         </div>
@@ -55,7 +56,10 @@ class Dashboard extends React.Component {
         <div key="tcases">
           <TotalCases></TotalCases>
         </div>
-        <div key="tdeaths1">
+        <div className="map" key="map">
+          <Map></Map>
+        </div>
+        <div key="tdeaths">
           <TotalDeaths></TotalDeaths>
         </div>
       </GridLayout>
