@@ -41,7 +41,9 @@ class Dashboard extends React.Component {
       {i: 'title', x:0, y: 1, w: 10, h: 1},
       {i: 'tcases', x: 0, y: 2, w: 1, h:2},
       {i: 'map', x: 1, y: 2, w: 8, h: 9},
-      {i: 'tdeaths', x: 9, y: 2, w: 1, h:2}
+      {i: 'tdeaths', x: 9, y: 2, w: 1, h:2},
+      {i: 'ccases', x: 0, y: 3, w: 1, h: 7},
+      {i: 'cdeaths', x: 9, y: 3, w: 1, h: 7},
     ];
 
     return (
@@ -61,6 +63,12 @@ class Dashboard extends React.Component {
         </div>
         <div key="tdeaths">
           <TotalDeaths></TotalDeaths>
+        </div>
+        <div className="country" key="ccases">
+          <CountryCases></CountryCases>
+        </div>
+        <div className="country" key="cdeaths">
+          <CountryDeaths></CountryDeaths>
         </div>
       </GridLayout>
       </div>

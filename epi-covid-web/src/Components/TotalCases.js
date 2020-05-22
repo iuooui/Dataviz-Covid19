@@ -6,7 +6,7 @@ class TotalCases extends React.Component {
     return (
       <Card bg={"dark"} text={"white"} className="total">
         <Card.Body>
-          <Card.Title className="text-center">Total Cases</Card.Title>
+          <Card.Title className="text-center">Total <span className="yellow">Cases</span></Card.Title>
           <Card.Text className="text-center yellow xl"> 931 203 180</Card.Text>
         </Card.Body>
       </Card>
