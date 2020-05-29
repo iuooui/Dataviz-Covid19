@@ -1,7 +1,5 @@
 import React from "react";
-import Card, { CardBody } from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import ListGroupItem from "react-bootstrap/ListGroupItem";
+import Card from "react-bootstrap/Card";
 
 class TotalRecovered extends React.Component {
   render() {

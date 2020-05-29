@@ -2,6 +2,12 @@ body {
   background-color: black;
 }
 
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+
 .title {
   font-size: x-large;
   margin-left: 30px;
