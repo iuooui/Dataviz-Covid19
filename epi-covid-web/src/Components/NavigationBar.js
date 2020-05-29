@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import Button from "react-bootstrap/Button"
+import Button from "react-bootstrap/Button";
 
 class Navigationbar extends React.Component {
   constructor(props) {
@@ -40,14 +40,34 @@ class Navigationbar extends React.Component {
       <Navbar bg="danger" variant="dark">
         <Navbar.Brand>Dataviz-Covid19</Navbar.Brand>
         <Nav className="mr-auto">
-        <Button className={"btn-primary-outline"} onClick={this.tCasesClick}>Total Cases</Button>
-        <Button className={"btn-primary-outline"} onClick={this.cCasesClick}>Country Cases</Button>
-        <Button className={"btn-primary-outline"} onClick={this.tDeathsClick}>Total Deaths</Button>
-        <Button className={"btn-primary-outline"} onClick={this.cDeathsClick}>Country Deaths</Button>
-        <Button className={"btn-primary-outline"} onClick={this.tRecoveredClick}>Total Recovered</Button>
-        <Button className={"btn-primary-outline"} onClick={this.cRecoveredClick}>Country Recovered</Button>
+          <Button className={"btn-primary-outline"} onClick={this.tCasesClick}>
+            Total Cases
+          </Button>
+          <Button className={"btn-primary-outline"} onClick={this.cCasesClick}>
+            Country Cases
+          </Button>
+          <Button className={"btn-primary-outline"} onClick={this.tDeathsClick}>
+            Total Deaths
+          </Button>
+          <Button className={"btn-primary-outline"} onClick={this.cDeathsClick}>
+            Country Deaths
+          </Button>
+          <Button
+            className={"btn-primary-outline"}
+            onClick={this.tRecoveredClick}
+          >
+            Total Recovered
+          </Button>
+          <Button
+            className={"btn-primary-outline"}
+            onClick={this.cRecoveredClick}
+          >
+            Country Recovered
+          </Button>
         </Nav>
-        <Button className={"btn-primary-outline"} onClick={this.nClearClick}>Clear Dashboard</Button>
+        <Button className={"btn-primary-outline"} onClick={this.nClearClick}>
+          Clear Dashboard
+        </Button>
       </Navbar>
     );
   }

@@ -14,11 +14,15 @@ import Title from "./Title";
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      width: 0, height: 0,
-      totalCases: [], countryCases: [],
-      totalDeaths: [], countryDeaths: [],
-      totalRecovered: [], countryRecovered: [],
+    this.state = {
+      width: 0,
+      height: 0,
+      totalCases: [],
+      countryCases: [],
+      totalDeaths: [],
+      countryDeaths: [],
+      totalRecovered: [],
+      countryRecovered: [],
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     this.TotalCasesClick = this.TotalCasesClick.bind(this);
@@ -45,63 +49,78 @@ class Dashboard extends React.Component {
 
   TotalCasesClick(e) {
     this.setState({
-      totalCases: [<div key={Math.random()} data-grid={{x: 0, y: 1, w: 1, h: 2}} 
-      >
-        <TotalCases></TotalCases>
-      </div>, ...this.state.totalCases]
+      totalCases: [
+        <div key={Math.random()} data-grid={{ x: 0, y: 1, w: 1, h: 2 }}>
+          <TotalCases></TotalCases>
+        </div>,
+        ...this.state.totalCases,
+      ],
     });
   }
 
   CountryCasesClick() {
     this.setState({
-      countryCases: [<div key={Math.random()} data-grid={{x: 0, y: 1, w: 1, h: 7}} 
-      >
-        <CountryCases></CountryCases>
-      </div>, ...this.state.countryCases]
+      countryCases: [
+        <div key={Math.random()} data-grid={{ x: 0, y: 1, w: 1, h: 7 }}>
+          <CountryCases></CountryCases>
+        </div>,
+        ...this.state.countryCases,
+      ],
     });
   }
 
   TotalDeathsClick() {
     this.setState({
-      totalDeaths: [<div key={Math.random()} data-grid={{x: 9, y: 1, w: 1, h: 2}} 
-      >
-        <TotalDeaths></TotalDeaths>
-      </div>, ...this.state.totalDeaths]
+      totalDeaths: [
+        <div key={Math.random()} data-grid={{ x: 9, y: 1, w: 1, h: 2 }}>
+          <TotalDeaths></TotalDeaths>
+        </div>,
+        ...this.state.totalDeaths,
+      ],
     });
   }
 
   CountryDeathsClick() {
     this.setState({
-      countryDeaths: [<div key={Math.random()} data-grid={{x: 9, y: 1, w: 1, h: 7}} 
-      >
-        <CountryDeaths></CountryDeaths>
-      </div>, ...this.state.countryDeaths]
+      countryDeaths: [
+        <div key={Math.random()} data-grid={{ x: 9, y: 1, w: 1, h: 7 }}>
+          <CountryDeaths></CountryDeaths>
+        </div>,
+        ...this.state.countryDeaths,
+      ],
     });
   }
 
   TotalRecoveredClick() {
     this.setState({
-      totalRecovered: [<div key={Math.random()} data-grid={{x: 0, y: 1, w: 1, h: 2}} 
-      >
-        <TotalRecovered></TotalRecovered>
-      </div>, ...this.state.totalRecovered]
+      totalRecovered: [
+        <div key={Math.random()} data-grid={{ x: 0, y: 1, w: 1, h: 2 }}>
+          <TotalRecovered></TotalRecovered>
+        </div>,
+        ...this.state.totalRecovered,
+      ],
     });
   }
 
   CountryRecoveredClick() {
     this.setState({
-      countryRecovered: [<div key={Math.random()} data-grid={{x: 0, y: 1, w: 1, h: 7}} 
-      >
-        <CountryRecovered></CountryRecovered>
-      </div>, ...this.state.countryRecovered]
+      countryRecovered: [
+        <div key={Math.random()} data-grid={{ x: 0, y: 1, w: 1, h: 7 }}>
+          <CountryRecovered></CountryRecovered>
+        </div>,
+        ...this.state.countryRecovered,
+      ],
     });
   }
 
   clearClick() {
     this.setState({
-      totalCases: [], countryCases: [],
-      totalDeaths: [], countryDeaths: [],
-      totalRecovered: [], countryRecovered: []
+      totalCases: [],
+      countryCases: [],
+      totalDeaths: [],
+      countryDeaths: [],
+      totalRecovered: [],
+      countryRecovered: [],
     });
   }
 
@@ -123,26 +142,20 @@ class Dashboard extends React.Component {
           cols={10}
           autoSize={true}
           rowHeight={60}
-
         >
           <div key="title" data-grid={{ x: 0, y: 0, w: 10, h: 1 }}>
             <Title></Title>
           </div>
-          <div
-            className="map"
-            key="map"
-            data-grid={{ x: 1, y: 1, w: 8, h: 9}}
-          >
+          <div className="map" key="map" data-grid={{ x: 1, y: 1, w: 8, h: 9 }}>
             <Map></Map>
           </div>
-        {this.state.totalCases}
-        {this.state.countryCases}
-        {this.state.totalDeaths}
-        {this.state.countryDeaths}
-        {this.state.totalRecovered}
-        {this.state.countryRecovered}
+          {this.state.totalCases}
+          {this.state.countryCases}
+          {this.state.totalDeaths}
+          {this.state.countryDeaths}
+          {this.state.totalRecovered}
+          {this.state.countryRecovered}
         </GridLayout>
-
       </div>
     );
   }
