@@ -41,7 +41,11 @@ body {
 }
 
 .green {
-  color: greenyellow;
+  color: green;
+}
+
+.lime {
+  color: limegreen;
 }
 
 .scrollable {

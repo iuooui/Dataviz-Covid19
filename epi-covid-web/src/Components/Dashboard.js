@@ -5,8 +5,10 @@ import GridLayout from 'react-grid-layout';
 import Map from "./Map";
 import CountryCases from "./CountryCases";
 import CountryDeaths from "./CountryDeaths";
+import CountryRecovered from "./CountryRecovered";
 import TotalCases from "./TotalCases"
 import TotalDeaths from "./TotalDeaths";
+import TotalRecovered from "./TotalRecovered";
 import Navigationbar from "./NavigationBar";
 import Title from "./Title";
 
@@ -38,8 +40,68 @@ class Dashboard extends React.Component {
     ]});
     for (let i= 0; i < this.state.numChildren; i++)
       this.children[0].push(
-      <div key={"t" + this.state.numChildren[0]} data-grid={{x: 0, y: 0, w: 1, h: 2}}>
+      <div key={"tc" + this.state.numChildren[0]} data-grid={{x: 0, y: 0, w: 1, h: 2}}>
         <TotalCases></TotalCases>
+        </div>)
+  }
+
+  CountryCasesClick() {
+    this.setState( {numChildren: [
+      this.state.numChildren[0], this.state.numChildren[1] + 1, this.state.numChildren[2], this.state.numChildren[3],
+      this.state.numChildren[4], this.state.numChildren[5]
+    ]});
+    for (let i= 0; i < this.state.numChildren; i++)
+      this.children[0].push(
+      <div key={"cc" + this.state.numChildren[1]} data-grid={{x: 0, y: 0, w: 1, h: 7}}>
+        <CountryCases></CountryCases>
+        </div>)
+  }
+
+  TotalDeathsClick() {
+    this.setState( {numChildren: [
+      this.state.numChildren[0], this.state.numChildren[1], this.state.numChildren[2] + 1, this.state.numChildren[3],
+      this.state.numChildren[4], this.state.numChildren[5]
+    ]});
+    for (let i= 0; i < this.state.numChildren; i++)
+      this.children[0].push(
+      <div key={"td" + this.state.numChildren[2]} data-grid={{x: 0, y: 0, w: 1, h: 2}}>
+        <TotalDeaths></TotalDeaths>
+        </div>)
+  }
+
+  CountryDeathsClick() {
+    this.setState( {numChildren: [
+      this.state.numChildren[0], this.state.numChildren[1], this.state.numChildren[2], this.state.numChildren[3] + 1,
+      this.state.numChildren[4], this.state.numChildren[5]
+    ]});
+    for (let i= 0; i < this.state.numChildren; i++)
+      this.children[0].push(
+      <div key={"cd" + this.state.numChildren[3]} data-grid={{x: 0, y: 0, w: 1, h: 7}}>
+        <TotalDeaths></TotalDeaths>
+        </div>)
+  }
+
+  TotalRecoveredClick() {
+    this.setState( {numChildren: [
+      this.state.numChildren[0], this.state.numChildren[1], this.state.numChildren[2], this.state.numChildren[3],
+      this.state.numChildren[4] + 1, this.state.numChildren[5]
+    ]});
+    for (let i= 0; i < this.state.numChildren; i++)
+      this.children[0].push(
+      <div key={"tr" + this.state.numChildren[4]} data-grid={{x: 0, y: 0, w: 1, h: 2}}>
+        <TotalRecovered></TotalRecovered>
+        </div>)
+  }
+
+  CountryRecoveredClick() {
+    this.setState( {numChildren: [
+      this.state.numChildren[0], this.state.numChildren[1], this.state.numChildren[2], this.state.numChildren[3],
+      this.state.numChildren[4], this.state.numChildren[5] + 1
+    ]});
+    for (let i= 0; i < this.state.numChildren; i++)
+      this.children[0].push(
+      <div key={"cr" + this.state.numChildren[5]} data-grid={{x: 0, y: 0, w: 1, h: 7}}>
+        <CountryRecovered></CountryRecovered>
         </div>)
   }
 
