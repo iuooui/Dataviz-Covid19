@@ -9,7 +9,7 @@ class TotalCases extends React.Component {
           <Card.Title className="text-center">
             Total <span className="yellow">Cases</span>
           </Card.Title>
-          <Card.Text className="text-center yellow xl"> 931 203 180</Card.Text>
+          <Card.Text className="text-center yellow xl"> 5 936 975	</Card.Text>
         </Card.Body>
       </Card>
     );

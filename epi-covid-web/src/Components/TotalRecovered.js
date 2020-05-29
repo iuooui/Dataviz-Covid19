@@ -7,7 +7,7 @@ class TotalRecovered extends React.Component {
       <Card bg={"dark"} text={"white"} className="total">
         <Card.Body>
           <Card.Title className="text-center">Total Healed</Card.Title>
-          <Card.Text className="text-center green xl"> 54 203 180</Card.Text>
+          <Card.Text className="text-center green xl"> 2 605 060</Card.Text>
         </Card.Body>
       </Card>
     );
